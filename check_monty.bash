@@ -42,7 +42,7 @@ function print_ok()
 # Returns:
 #   None
 #######################################
-function stop_shell()
+function stop_monty()
 {
     if [ `pidof $MONTY | wc -l` -ne 0 ]; then
 	   killall -9 $MONTY 2>&1 > /dev/null

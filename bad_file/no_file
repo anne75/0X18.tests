@@ -1,0 +1,23 @@
+#!/bin/bash
+#
+# test no file
+
+# clean up
+stop_monty
+
+# run command
+echo "" | $MONTY > $OUTPUTFILE 2> /dev/null &
+
+# wait a little bit
+$SLEEP $SLEEPSECONDS
+
+# check the result
+nmatch=`cat $OUTPUTFILE | grep -c "USAGE: monty file"`
+if [ $nmatch -eq 1 ]; then
+      print_ok
+else
+	print_ko
+fi
+
+# clean up
+stop_monty
