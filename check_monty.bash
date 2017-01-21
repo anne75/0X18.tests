@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Performing checks on the Holberton School "simple shell" project
+# Performing checks on the Holberton School "monty interpretor" project
 
 #######################################
 # Print KO, in red, followed by a new line
@@ -58,9 +58,9 @@ echo -ne "\033[37m"
 rm -f $OUTPUTFILE $LTRACEOUTPUTFILE
 
 # Printout explaining the process
-echo Hello, and welcome to the simple shell testsuite!
+echo Hello, and welcome to the monty testsuite!
 echo First, make sure you have configured the config file
-echo "  the var \$MONTY in config should point to your shell"
+echo "  the var \$MONTY in config should point to your interpretor"
 echo " "
 echo The tests should produce only OK or KO.
 echo Any extra output is extraneous, and is likely a mistake.
