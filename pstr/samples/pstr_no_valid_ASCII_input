@@ -1,0 +1,3 @@
+push 255
+push 300
+pstr

@@ -6,13 +6,13 @@ tmp_file="checker_tmp_file_$RANDOM"
 stop_monty
 
 # run command
-$MONTY stack_queue/samples/intranet_example_input > $OUTPUTFILE 2> /dev/null &
+$MONTY rotl/samples/intranet_example_input > $OUTPUTFILE 2> /dev/null &
 
 # wait a little bit
 $SLEEP $SLEEPSECONDS
 
 # check the result
-diff $OUTPUTFILE stack_queue/samples/intranet_example_output > /dev/null
+diff $OUTPUTFILE rotl/samples/intranet_example_output > /dev/null
 if [ $? -eq 0 ]; then
       print_ok
 else
