@@ -1,0 +1,10 @@
+push 6
+push 3
+div
+pall
+push 1
+div
+pall
+push 2
+div
+pall

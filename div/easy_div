@@ -1,0 +1,24 @@
+#!/bin/bash
+#
+# Tests for identical output to intranet example for project 15: stack, queue
+tmp_file="checker_tmp_file_$RANDOM"
+
+# clean up
+stop_monty
+
+# run command
+$MONTY div/samples/easy_div_input > $OUTPUTFILE 2> /dev/null &
+
+# wait a little bit
+$SLEEP $SLEEPSECONDS
+
+# check the result
+diff $OUTPUTFILE div/samples/easy_div_output > /dev/null
+if [ $? -eq 0 ]; then
+      print_ok
+else
+	print_ko
+fi
+
+# clean up
+stop_monty
