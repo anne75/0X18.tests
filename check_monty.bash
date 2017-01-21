@@ -71,7 +71,7 @@ echo " "
 for dir in `ls -d "$TESTDIR"/*/`
 do
     echo "> $dir"
-    for testname in `ls "$dir" | grep -v "~$"`
+    for testname in `ls "$dir" | grep -v "~$" | grep .test`
     do
 	   echo -n "   # $testname: "
 	   source "$dir$testname"

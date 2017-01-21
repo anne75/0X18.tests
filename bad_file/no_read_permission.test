@@ -7,8 +7,9 @@ tmp_file="checker_tmp_file_$RANDOM"
 stop_monty
 
 # run command
+touch $tmp_file
 chmod a-r $tmp_file
-echo $tmp_file | $MONTY > $OUTPUTFILE 2> /dev/null &
+$MONTY $tmp_file > $OUTPUTFILE 2> /dev/null &
 
 # wait a little bit
 $SLEEP $SLEEPSECONDS
