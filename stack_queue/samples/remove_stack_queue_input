@@ -1,0 +1,16 @@
+stack
+push 2
+queue
+push 3
+pall
+pop
+pall
+push 4
+pall
+pop
+pall
+pop
+pall
+queue
+stack
+queue
